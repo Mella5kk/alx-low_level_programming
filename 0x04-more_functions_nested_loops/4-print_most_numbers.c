@@ -2,7 +2,6 @@
 
 /**
  * print_most_numbers - prints number
- * Return: 0
  */
 
 void print_most_numbers(void);
