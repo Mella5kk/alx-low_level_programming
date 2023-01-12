@@ -7,6 +7,7 @@
  * @x: character to convert.
  * Return: integer.
  */
+
 int _atoi_digit(char x)
 {
 	unsigned int res;
@@ -15,11 +16,13 @@ int _atoi_digit(char x)
 		res = x - '0';
 	return (res);
 }
+
 /**
  * _isNumber - Define if a string is a number.
  * @argv: Pointer to string.
  * Return: success (0).
  */
+
 int _isNumber(char *argv)
 {
 	int i;
@@ -29,12 +32,14 @@ int _isNumber(char *argv)
 			return (1);
 	return (0);
 }
+
 /**
  * _calloc - allocate array of size * nmemb.
  * @nmemb: number of elements.
  * @size: size of element.
  * Return: pointer to array.
  */
+
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *tab;
@@ -50,6 +55,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	return (tab);
 }
+
 /**
  * mul_array - multiply two arrays.
  * @a1: first array.
@@ -59,6 +65,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
  * @lena: length of array a3.
  * Return: pointer to array.
  */
+
 void *mul_array(char *a1, int len1, char a2, char *a3, int lena)
 {
 	int mul = 0, i, k;
@@ -94,6 +101,7 @@ void print_array(char *a, int nb)
 	}
 	_putchar('\n');
 }
+
 /**
  * main - print the multiplication of 2 numbers.
  * @argc: array length.
@@ -128,8 +136,8 @@ int main(int argc, char *argv[])
 	}
 	for (i = len2 - 1, c = 0; i >= 0; i--)
 	{
-		tabres = mul_array(argv[1], len1, argv[2][i], tabres, (lenres - 1 - c));
-		c++;
+	tabres = mul_array(argv[1], len1, argv[2][i], tabres, (lenres - 1 - c));
+	c++;
 	}
 	print_array(tabres, lenres);
 	free(tabres);
